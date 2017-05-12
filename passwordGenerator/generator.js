@@ -46,7 +46,7 @@ function digitChecker(pw) {
 
 function lengthChecker(pw) {
   if (pw.length > 20) {
-    pw = pw.split('').slice(10, pw.length - 1).join('');
+    pw = pw.split('').slice(10).join('');
   } else if (pw.length < 6) {
     pw += randomStrGen(2, 3);
   }
