@@ -10,9 +10,7 @@ var soundex = function(names) {
     i++;
   }
 
-  names = replaceOneDigit(names);
-  names = replaceVowels(names);
-  names = checkLength(names, firstLetters);
+  names = checkLength(replaceVowels(replaceOneDigit(names)), firstLetters);
 
   return names.toUpperCase();
 }
