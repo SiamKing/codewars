@@ -5,27 +5,21 @@ function sumtheDifference(equation) {
   console.log(arr)
   let newArr = [];
   arr.forEach(val => {
-    if (val.length > 1) {
-      if (val.includes('-')) {
-        if (val.length > 2) {
-          newArr.push(val.slice(0, 2));
-          let i = 2
-          while (i < val.length) {
-            newArr.push(val.slice(i, i + 1));
-            i++;
-          }
-        } else {
-          newArr.push(val)
-        }
-      } else {
-        let i = 0
-        while (i < val.length) {
-          newArr.push(val.slice(i, i + 1));
-          i++;
-        }
+    if (val.length > 1 && val.includes('-') == false) {
+      let i = 0
+      while (i < val.length) {
+        newArr.push(val.slice(i, i + 1));
+        i++;
+      }
+    } else if (val.includes('-') && val.length > 2) {
+      newArr.push(val.slice(0, 2));
+      let i = 2
+      while (i < val.length) {
+        newArr.push(val.slice(i, i + 1));
+        i++;
       }
     } else {
-        newArr.push(val);
+      newArr.push(val)
     }
   })
   console.log(newArr)
