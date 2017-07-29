@@ -1,3 +1,3 @@
 function contamination(text, char){
-  return text == "" ? "" : char.repeat(text.length);
+  return char.repeat(text.length);
 }
