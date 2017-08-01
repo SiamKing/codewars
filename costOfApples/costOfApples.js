@@ -9,5 +9,5 @@ function apples(kilos, price) {
       break;
     }
   }
-  return +(kilos * price - (kilos * price * discount)).toFixed(4);
+  return kilos * price * (1 - discount);
 }
