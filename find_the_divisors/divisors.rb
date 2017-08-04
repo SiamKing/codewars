@@ -1,9 +1,5 @@
 def divisors(n)
-  arr = []
-
-  (2..(n / 2)).each do |num|
-    arr << num if n % num == 0
-  end
+  arr = (2..(n / 2)).select {|num| n % num == 0}
 
   arr.empty? ? "#{n} is prime" : arr
 end
