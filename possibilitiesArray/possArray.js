@@ -1,14 +1,9 @@
 function isAllPossibilities(x){
-  if (x.length == 0) {
-    return false;
+  x = x.sort((a,b) => a - b);
+  let y = [...Array(x.length).keys()];
+
+  if (x.toString() == y.toString() && x.length !== 0) {
+    return true;
   }
-  let i = 0;
-  while (i < x.length) {
-     if (x.includes(i)) {
-       i++;
-      } else {
-        return false;
-      }
-  }
-  return true;
+  return false;
 }
